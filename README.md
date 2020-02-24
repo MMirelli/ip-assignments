@@ -10,7 +10,7 @@ Assignments 1 and 2 need some dependecies to be installed:
 
 `pip install -r requirements.txt`
 
-Assignment 3 can be run on any browser. 
+Assignment 3 can be executed on any browser (just open [index.html](./part3/webrtc/index.html). 
 
 > If you wish to test the playback delay, please follow the instruction in [main.js](./part3/webrtc/js/main.js) to find out how.
 
