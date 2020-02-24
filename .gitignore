@@ -1,0 +1,17 @@
+/venv/
+/.idea/
+**/__pycache__
+*.log
+**/trace
+*.jpg
+**/#*#
+part2/data/*.json
+**/mosquitto.db
+
+part3/http-stream/dashvideo/*.mp4
+part3/http-stream/dashvideo/*.mpd
+part3/http-stream/hlsvideo/*.mp4
+part3/http-stream/hlsvideo/*/*.ts
+part3/http-stream/hlsvideo/*.m3u8
+part3/http-stream/hlsvideo/*/*.m3u8
+part3/http-stream/.vagrant/

@@ -1,0 +1,47 @@
+version: "3"
+services:
+
+  hstream1:
+    image: httpd:2.4
+    network_mode: bridge
+    container_name: hstream1
+    expose:
+      - 80
+    ports:
+      - 8091:80
+    volumes:
+      - ./ip-httpd.conf:/usr/local/apache2/conf/httpd.conf
+      - ./client/:/usr/local/apache2/htdocs/
+      - ./dashvideo/:/usr/local/apache2/htdocs/dash/
+      - ./hlsvideo/:/usr/local/apache2/htdocs/hls/
+    restart: unless-stopped
+
+  hstream2:
+    image: httpd:2.4
+    network_mode: bridge
+    container_name: hstream2
+    expose:
+      - 80
+    ports:
+      - 8092:80
+    volumes:
+      - ./ip-httpd.conf:/usr/local/apache2/conf/httpd.conf
+      - ./client/:/usr/local/apache2/htdocs/
+      - ./dashvideo/:/usr/local/apache2/htdocs/dash/
+      - ./hlsvideo/:/usr/local/apache2/htdocs/hls/
+    restart: unless-stopped
+
+  hstream3:
+    image: httpd:2.4
+    network_mode: bridge
+    container_name: hstream3
+    expose:
+      - 80
+    ports:
+      - 8093:80
+    volumes:
+      - ./ip-httpd.conf:/usr/local/apache2/conf/httpd.conf
+      - ./client/:/usr/local/apache2/htdocs/
+      - ./dashvideo/:/usr/local/apache2/htdocs/dash/
+      - ./hlsvideo/:/usr/local/apache2/htdocs/hls/
+    restart: unless-stopped

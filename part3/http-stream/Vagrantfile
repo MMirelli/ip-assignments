@@ -1,0 +1,53 @@
+# -*- mode: ruby -*-
+# vi: set ft=ruby :
+
+Vagrant.configure("2") do |config|
+
+
+    config.ssh.forward_agent = true
+  
+  
+    config.vm.define "ia" do |ia|
+      ia.vm.box = "ubuntu/xenial64"
+      ia.vm.hostname = 'ia'
+  
+      ia.vm.network "forwarded_port", 
+        guest: 22, 
+        host: 20004, 
+        host_ip: "127.0.0.1", 
+        id: 'ssh'
+
+      ia.vm.network "forwarded_port", guest: 80, host: 8094
+  
+      ia.vm.network "private_network", ip: "10.0.4.11",
+        virtualbox__intnet: "intnet1"
+      
+      ia.vm.provision "file",
+        source: "./client", 
+        destination: "$HOME/var/www"
+
+      ia.vm.provision "file",
+        source: "./dashvideo", 
+        destination: "$HOME/var/www/dash"
+
+      ia.vm.provision "file",
+        source: "./hlsvideo", 
+        destination: "$HOME/var/www/hls"
+  
+      ia.vm.provider :virtualbox do |v|
+        v.customize ["modifyvm", :id, "--memory", 2048]
+        v.customize ["modifyvm", :id, "--name", "ia"]
+        v.cpus = 1
+      end
+  
+      ia.vm.provision "shell", inline: <<-SHELL
+        apt-get update
+        apt-get install -y apache2
+        sed -i 's/PasswordAuthentication no/PasswordAuthentication yes/g' /etc/ssh/sshd_config    
+        systemctl restart sshd.service
+      SHELL
+  
+    end
+  
+  end
+  
