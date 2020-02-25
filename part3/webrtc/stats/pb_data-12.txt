@@ -1,0 +1,103 @@
+Delay receiver
+framesDecoded t0: 0
+framesDecoded t1: 0
+decodingTimestamp t0: 1582619735045
+decodingTimestamp t1: 1582619736081
+main.js:457:13
+Delay sender
+framesEncoded t0: 0
+framesEncoded t1: 6
+encodingTimestamp t0: 1582619735045
+encodingTimestamp t1: 1582619736081
+main.js:439:13
+Bitrate  187.89127324749643  kbps main.js:570:12
+Delay receiver
+framesDecoded t0: 0
+framesDecoded t1: 10
+decodingTimestamp t0: 1582619736081
+decodingTimestamp t1: 1582619737090
+main.js:457:13
+Delay sender
+framesEncoded t0: 6
+framesEncoded t1: 11
+encodingTimestamp t0: 1582619736081
+encodingTimestamp t1: 1582619737090
+main.js:439:13
+Bitrate  602.2455132806891  kbps main.js:570:12
+Delay receiver
+framesDecoded t0: 10
+framesDecoded t1: 11
+decodingTimestamp t0: 1582619737090
+decodingTimestamp t1: 1582619738145
+main.js:457:13
+Delay sender
+framesEncoded t0: 11
+framesEncoded t1: 13
+encodingTimestamp t0: 1582619737090
+encodingTimestamp t1: 1582619738244
+main.js:439:13
+Delay receiver
+framesDecoded t0: 11
+framesDecoded t1: 14
+decodingTimestamp t0: 1582619738145
+decodingTimestamp t1: 1582619739186
+main.js:457:13
+Bitrate  835.3399778516058  kbps main.js:570:12
+Delay receiver
+framesDecoded t0: 14
+framesDecoded t1: 16
+decodingTimestamp t0: 1582619739186
+decodingTimestamp t1: 1582619741146
+main.js:457:13
+Delay sender
+framesEncoded t0: 13
+framesEncoded t1: 27
+encodingTimestamp t0: 1582619738244
+encodingTimestamp t1: 1582619741383
+main.js:439:13
+Delay receiver
+framesDecoded t0: 16
+framesDecoded t1: 20
+decodingTimestamp t0: 1582619741146
+decodingTimestamp t1: 1582619744040
+main.js:457:13
+Bitrate  649.6350597609562  kbps main.js:570:12
+Delay receiver
+framesDecoded t0: 20
+framesDecoded t1: 31
+decodingTimestamp t0: 1582619744040
+decodingTimestamp t1: 1582619747523
+main.js:457:13
+Delay sender
+framesEncoded t0: 27
+framesEncoded t1: 55
+encodingTimestamp t0: 1582619741383
+encodingTimestamp t1: 1582619747829
+main.js:439:13
+Delay receiver
+framesDecoded t0: 31
+framesDecoded t1: 46
+decodingTimestamp t0: 1582619747523
+decodingTimestamp t1: 1582619751901
+main.js:457:13
+Bitrate  628.6146121014311  kbps main.js:570:12
+Delay receiver
+framesDecoded t0: 46
+framesDecoded t1: 65
+decodingTimestamp t0: 1582619751901
+decodingTimestamp t1: 1582619758141
+main.js:457:13
+Delay sender
+framesEncoded t0: 55
+framesEncoded t1: 96
+encodingTimestamp t0: 1582619747829
+encodingTimestamp t1: 1582619758633
+main.js:439:13
+Delay receiver
+framesDecoded t0: 65
+framesDecoded t1: 84
+decodingTimestamp t0: 1582619758141
+decodingTimestamp t1: 1582619766948
+main.js:457:13
+Bitrate  600.7434364439823  kbps main.js:570:12
+Ending calls

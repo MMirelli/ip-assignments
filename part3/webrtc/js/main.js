@@ -31,11 +31,12 @@ const LOCAL_STATS_NAME = 'outbound_rtp_video_0';
 const REMOTE_STATS_NAME = 'inbound_rtp_video_0';
 
 // search for field framesEncoded in logs and replace fill_here1 with the id of the Object
-//const LOCAL_STATS_NAME = <fill_here1>;
+//const LOCAL_STATS_NAME = 'RTCCodec_0_Outbound_100';
+//const LOCAL_STATS_NAME = 'outbound-rtp';
 
 // search for field framesDecoded in logs and replace fill_here2 with the id of the Object
-//const REMOTE_STATS_NAME = <fill_here2>;
-
+//const REMOTE_STATS_NAME = 'RTCCodec_0_Inbound_100';
+//const REMOTE_STATS_NAME = 'inbound-rtp'
 // Finally comment the console.log('DEBUG:'...); [find it in the file just searching DEBUG:].
 
 
@@ -112,7 +113,7 @@ function setUpReceiverVideos(){
     senderNDesElem.hidden = true;
     receiverVideos = new Array(SENDER_N);
 
-    // the list of connections open by
+    // the list of connections open bydebug
     // each sender in the many-to-one case
     senders = new Array(SENDER_N);
 
@@ -406,7 +407,7 @@ function getStat(stats, statId, key){
     var rst = '';
     stats.forEach( stat => {
 	// comment line below, to have nice logs
-	console.log('DEBUG:',stat);
+	//console.log('DEBUG:',stat);
  	if(stat['id'] === statId){
     	    Object.keys(stat).forEach(k  => {
 		if (k === key) {
@@ -431,14 +432,14 @@ function getLocalStats(stats){
     var tsMsg = 'encodingTimestamp';
     
     encodedFrames[0] = encodedFrames[1];
-    
     encodedFrames[1] = getStat(stats, LOCAL_STATS_NAME, 'framesEncoded');
     rst += concat2Times(framesMsg, encodedFrames);
     
     encodedTimes[0] = encodedTimes[1];
     encodedTimes[1] = getStat(stats, LOCAL_STATS_NAME, 'timestamp');
     rst += concat2Times(tsMsg, encodedTimes);
-    
+
+    console.log(rst.split('<br>').join('\n'));
     senderRstDiv.innerHTML = `${rst}`;
 }
 
@@ -456,7 +457,7 @@ function getRemoteStats(stats){
     decodedTimes[1] = getStat(stats, REMOTE_STATS_NAME, 'timestamp');
     rst += concat2Times(tsMsg, decodedTimes);
     
-    console.log(rst);
+    console.log(rst.split('<br>').join('\n'));
     receiverRstDiv.innerHTML = `${rst}`;
 }
 

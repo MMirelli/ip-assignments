@@ -1,6 +1,6 @@
 ### IP-2020
 
-In these projects, I have explored a few cutting-edge Internet Protocols including HTTP/2, MQTT, HLS, DASH and WebRTC. The assignment were completed in groups of three members. I am grateful to S.V. and R.O. for having been members of my team in this small projects.
+In these projects, I have explored a few cutting-edge Internet Protocols including HTTP/2, MQTT, HLS, DASH and WebRTC. The assignment were completed in groups of three members. I am grateful to S.V. and R.O. for having been members of my team in these small projects.
 
 -------
 
@@ -10,7 +10,7 @@ Assignments 1 and 2 need some dependecies to be installed:
 
 `pip install -r requirements.txt`
 
-Assignment 3 can be executed on any browser (just open [index.html](./part3/webrtc/index.html). 
+Assignment 3 can be executed on any browser (just open [index.html](./part3/webrtc/index.html)). 
 
 > If you wish to test the playback delay, please follow the instruction in [main.js](./part3/webrtc/js/main.js) to find out how.
 
@@ -54,4 +54,4 @@ My focus was in developing:
 
 The assignment requested to measure the behaviour of few (at least two) video streaming protocols in one-to-many and many-to-one scenarios. We experimented HLS, DASH and WebRTC.
 
-Personally, I worked on [WebRTC](./part3/webrtc), implementing a p2p solution to stream video data collected from the system webcam.
+Personally, I worked on [WebRTC](./part3/webrtc), implementing a p2p solution to stream video data collected from the system webcam, and computed the playback delay statistics.
