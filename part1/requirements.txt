@@ -40,7 +40,7 @@ sslkeylog==0.2.0
 texttable==1.6.2
 th2c==0.4.1
 tornado==6.0.3
-Twisted==19.10.0
+Twisted==22.2.0
 urllib3==1.25.8
 websocket-client==0.57.0
 zipp==2.1.0
